@@ -1,0 +1,12 @@
+
+query Customers {
+  customers {
+    name
+    address
+    email
+    created_at
+    id
+    phone
+  }
+}
+

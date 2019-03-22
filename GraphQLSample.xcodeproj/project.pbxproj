@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64F4B6DB223F4F8A008020D6 /* test.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 64F4B6DA223F4F8A008020D6 /* test.graphql */; };
+		64F4B6DD223F5BCB008020D6 /* ApolloServie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6DC223F5BCB008020D6 /* ApolloServie.swift */; };
+		64F4B6E5223F6C4E008020D6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E4223F6C4E008020D6 /* API.swift */; };
+		64F4B6E7223F8F86008020D6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E6223F8F86008020D6 /* ViewModel.swift */; };
+		64F4B6E9223F8FB6008020D6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E8223F8FB6008020D6 /* DataModel.swift */; };
 		64FEED8E223F3D6A00EC7EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEED8D223F3D6A00EC7EEA /* AppDelegate.swift */; };
 		64FEED90223F3D6A00EC7EEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEED8F223F3D6A00EC7EEA /* ViewController.swift */; };
 		64FEED93223F3D6A00EC7EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FEED91223F3D6A00EC7EEA /* Main.storyboard */; };
@@ -29,6 +34,11 @@
 
 /* Begin PBXFileReference section */
 		47000EFC1A1599BFE6F4D1C0 /* Pods_GraphQLSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphQLSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F4B6DA223F4F8A008020D6 /* test.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.graphql; sourceTree = "<group>"; };
+		64F4B6DC223F5BCB008020D6 /* ApolloServie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloServie.swift; sourceTree = "<group>"; };
+		64F4B6E4223F6C4E008020D6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		64F4B6E6223F8F86008020D6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		64F4B6E8223F8FB6008020D6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		64FEED8A223F3D6A00EC7EEA /* GraphQLSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FEED8D223F3D6A00EC7EEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FEED8F223F3D6A00EC7EEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,10 +112,15 @@
 			children = (
 				64FEED8D223F3D6A00EC7EEA /* AppDelegate.swift */,
 				64FEED8F223F3D6A00EC7EEA /* ViewController.swift */,
+				64F4B6E6223F8F86008020D6 /* ViewModel.swift */,
+				64F4B6E8223F8FB6008020D6 /* DataModel.swift */,
 				64FEED91223F3D6A00EC7EEA /* Main.storyboard */,
 				64FEED94223F3D6E00EC7EEA /* Assets.xcassets */,
 				64FEED96223F3D6E00EC7EEA /* LaunchScreen.storyboard */,
 				64FEED99223F3D6E00EC7EEA /* Info.plist */,
+				64F4B6DA223F4F8A008020D6 /* test.graphql */,
+				64F4B6DC223F5BCB008020D6 /* ApolloServie.swift */,
+				64F4B6E4223F6C4E008020D6 /* API.swift */,
 			);
 			path = GraphQLSample;
 			sourceTree = "<group>";
@@ -136,6 +151,7 @@
 			buildConfigurationList = 64FEEDA7223F3D6E00EC7EEA /* Build configuration list for PBXNativeTarget "GraphQLSample" */;
 			buildPhases = (
 				8CC38B8F52AE20D817DA6EEF /* [CP] Check Pods Manifest.lock */,
+				64FEEDAD223F3E7900EC7EEA /* Generate Apollo GraphQL API */,
 				64FEED86223F3D6A00EC7EEA /* Sources */,
 				64FEED87223F3D6A00EC7EEA /* Frameworks */,
 				64FEED88223F3D6A00EC7EEA /* Resources */,
@@ -216,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FEED98223F3D6E00EC7EEA /* LaunchScreen.storyboard in Resources */,
+				64F4B6DB223F4F8A008020D6 /* test.graphql in Resources */,
 				64FEED95223F3D6E00EC7EEA /* Assets.xcassets in Resources */,
 				64FEED93223F3D6A00EC7EEA /* Main.storyboard in Resources */,
 			);
@@ -239,11 +256,26 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GraphQLSample/Pods-GraphQLSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/RxApolloClient/RxApolloClient.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxApolloClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -290,6 +322,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraphQLSampleTests/Pods-GraphQLSampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		64FEEDAD223F3E7900EC7EEA /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
 		};
 		787E066D99140F54A1B95135 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -358,8 +408,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F4B6E7223F8F86008020D6 /* ViewModel.swift in Sources */,
 				64FEED90223F3D6A00EC7EEA /* ViewController.swift in Sources */,
+				64F4B6DD223F5BCB008020D6 /* ApolloServie.swift in Sources */,
+				64F4B6E5223F6C4E008020D6 /* API.swift in Sources */,
 				64FEED8E223F3D6A00EC7EEA /* AppDelegate.swift in Sources */,
+				64F4B6E9223F8FB6008020D6 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,3 +1,37 @@
-PODFILE CHECKSUM: 045b749d55a1c0f1a3065b19b75fade1b9af2f60
+PODS:
+  - Apollo (0.9.5):
+    - Apollo/Core (= 0.9.5)
+  - Apollo/Core (0.9.5)
+  - FLEX (2.4.0)
+  - RxApolloClient (0.1.0):
+    - Apollo (~> 0.9.4)
+    - RxSwift (~> 4.0)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+
+DEPENDENCIES:
+  - Apollo
+  - FLEX (~> 2.0)
+  - RxApolloClient
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+
+SPEC CHECKSUMS:
+  Apollo: 19caf3246d292bbb69ecad1bd098661f78222aba
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  RxApolloClient: 33a9b145c6990d77bd240ff3b1395b6115ecb82c
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+
+PODFILE CHECKSUM: 21a41a5449ae9f81ad46dc3924f5fe5c3f6bc167
 
 COCOAPODS: 1.4.0

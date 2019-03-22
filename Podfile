@@ -12,4 +12,10 @@ target 'GraphQLSample' do
     # Pods for testing
   end
 
+  pod "Apollo"
+  pod "RxSwift"
+  pod "RxCocoa"
+  pod 'RxApolloClient'
+  pod 'RxOptional'
+  pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 end
