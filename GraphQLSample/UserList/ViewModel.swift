@@ -29,21 +29,15 @@ class ViewModel {
       .asObservable()
       .filter { $0 }
       .flatMapLatest { _ in
-        WebService().getCustomers().asObservable()
+        WebService.shared.getCustomers().asObservable()
       }
       .catchErrorJustReturn(List<Customer>(item: []))
       .map { $0 }
       .bind(to: customers)
       .disposed(by: disposBag)
+    
+    isReloadData.accept(true)
   }
 }
 
-class WebService {
-  func getCustomers() -> Single<List<CustomersQuery.Data.Customer>> {
-    return ApolloServie.shared.fetch(query: CustomersQuery())
-      .map { result in
-        List<CustomersQuery.Data.Customer>(item: result.customers?.compactMap{ $0
-        } ?? [])
-      }.asSingle()
-  }
-}
+
