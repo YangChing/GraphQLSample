@@ -12,9 +12,9 @@ target 'GraphQLSample' do
     # Pods for testing
   end
 
-  pod "Apollo"
-  pod "RxSwift"
-  pod "RxCocoa"
+  pod 'Apollo', :git => 'https://github.com/apollographql/apollo-ios.git', :branch => 'master'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'RxApolloClient'
   pod 'RxOptional'
   pod 'FLEX', '~> 2.0', :configurations => ['Debug']

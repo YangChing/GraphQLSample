@@ -16,12 +16,22 @@ PODS:
     - RxAtomic (>= 4.4.2, ~> 4.4)
 
 DEPENDENCIES:
-  - Apollo
+  - Apollo (from `https://github.com/apollographql/apollo-ios.git`, branch `master`)
   - FLEX (~> 2.0)
   - RxApolloClient
   - RxCocoa
   - RxOptional
   - RxSwift
+
+EXTERNAL SOURCES:
+  Apollo:
+    :branch: master
+    :git: https://github.com/apollographql/apollo-ios.git
+
+CHECKOUT OPTIONS:
+  Apollo:
+    :commit: 7fff6b482083e42a48a84286d4ce01732c48c2fa
+    :git: https://github.com/apollographql/apollo-ios.git
 
 SPEC CHECKSUMS:
   Apollo: 19caf3246d292bbb69ecad1bd098661f78222aba
@@ -32,6 +42,6 @@ SPEC CHECKSUMS:
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: 21a41a5449ae9f81ad46dc3924f5fe5c3f6bc167
+PODFILE CHECKSUM: 108fa98ff236c0e71eb75d5048990b68a3d822ef
 
 COCOAPODS: 1.4.0
