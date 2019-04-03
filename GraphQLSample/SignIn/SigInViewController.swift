@@ -11,10 +11,12 @@ import UIKit
 import RxOptional
 import RxSwift
 import RxCocoa
+import WebKit
 
 class SignInViewController: UIViewController {
 
   var viewModel: SignInViewModel!
+  let wkWebView = WKWebView.init(frame: CGRect.init(x: 0, y: 300, width: 500, height: 600))
 
   @IBOutlet weak var email: UITextField!
   @IBOutlet weak var password: UITextField!
@@ -24,7 +26,10 @@ class SignInViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    wkWebView.loadHTMLString("<p><a href=\"https://nippon.car-rental.jp/globals/cn_index/\"><img src=\"https://i.froala.com/assets/photo7.jpg\" data-id=\"7\" data-type=\"image\" data-name=\"Image 2019-02-10 at 06:02:57.jpg\" style=\"width: 300px;\" class=\"fr-fic fr-dib\">https://nippon.car-rental.jp/globals/cn_index/</a></p>", baseURL: nil)
+    wkWebView.isOpaque = false
+    wkWebView.backgroundColor = .black
+    self.view.addSubview(wkWebView)
     viewModel = SignInViewModel()
 
     email.rx

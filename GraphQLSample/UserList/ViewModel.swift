@@ -13,11 +13,14 @@ import RxApolloClient
 import RxOptional
 
 typealias Customer = CustomersQuery.Data.Customer
+typealias User = UsersQuery.Data.User
 
 class ViewModel {
 
   //output
   var customers = BehaviorRelay<List<Customer>>.init(value: List<Customer>(item: []))
+
+  var users = BehaviorRelay<List<User>>.init(value: List<User>(item: []))
 
   //input
   let isReloadData = BehaviorRelay<Bool>(value: false)
@@ -29,11 +32,11 @@ class ViewModel {
       .asObservable()
       .filter { $0 }
       .flatMapLatest { _ in
-        WebService.shared.getCustomers().asObservable()
+        WebService.shared.getUsers().asObservable()
       }
-      .catchErrorJustReturn(List<Customer>(item: []))
+      .catchErrorJustReturn(List<User>(item: []))
       .map { $0 }
-      .bind(to: customers)
+      .bind(to: users)
       .disposed(by: disposBag)
     
     isReloadData.accept(true)

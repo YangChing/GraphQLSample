@@ -10,6 +10,14 @@ query Customers {
   }
 }
 
+query Users {
+  users{
+    name
+    phone
+    id
+  }
+}
+
 
 
 

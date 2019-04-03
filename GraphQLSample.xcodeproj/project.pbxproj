@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6459EBBF224A05F80017DFE8 /* SigInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459EBBE224A05F80017DFE8 /* SigInViewController.swift */; };
-		64F4B6DB223F4F8A008020D6 /* Query.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 64F4B6DA223F4F8A008020D6 /* Query.graphql */; };
 		64F4B6DD223F5BCB008020D6 /* ApolloServie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6DC223F5BCB008020D6 /* ApolloServie.swift */; };
 		64F4B6E5223F6C4E008020D6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E4223F6C4E008020D6 /* API.swift */; };
 		64F4B6E7223F8F86008020D6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E6223F8F86008020D6 /* ViewModel.swift */; };
 		64F4B6E9223F8FB6008020D6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B6E8223F8FB6008020D6 /* DataModel.swift */; };
 		64FC4BE6224A072100290666 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC4BE5224A072100290666 /* SignInViewModel.swift */; };
 		64FC4BE9224A074300290666 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC4BE8224A074300290666 /* WebService.swift */; };
-		64FC4BEC224B602200290666 /* Mutation.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 64FC4BEB224B602200290666 /* Mutation.graphql */; };
 		64FEED8E223F3D6A00EC7EEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEED8D223F3D6A00EC7EEA /* AppDelegate.swift */; };
 		64FEED90223F3D6A00EC7EEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEED8F223F3D6A00EC7EEA /* ViewController.swift */; };
 		64FEED93223F3D6A00EC7EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FEED91223F3D6A00EC7EEA /* Main.storyboard */; };
@@ -268,8 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FEED98223F3D6E00EC7EEA /* LaunchScreen.storyboard in Resources */,
-				64FC4BEC224B602200290666 /* Mutation.graphql in Resources */,
-				64F4B6DB223F4F8A008020D6 /* Query.graphql in Resources */,
 				64FEED95223F3D6E00EC7EEA /* Assets.xcassets in Resources */,
 				64FEED93223F3D6A00EC7EEA /* Main.storyboard in Resources */,
 			);
@@ -625,7 +621,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.YCFeng.GraphQLSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -644,7 +640,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.YCFeng.GraphQLSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

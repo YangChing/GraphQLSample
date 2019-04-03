@@ -14,6 +14,7 @@ import RxOptional
 
 class WebService {
 
+
   static var shared = WebService()
 
   func getCustomers() -> Single<List<CustomersQuery.Data.Customer>> {
@@ -33,6 +34,15 @@ class WebService {
         }
         return signInUser
       }).asSingle()
+  }
+
+  func getUsers() -> Single<List<UsersQuery.Data.User>> {
+    return ApolloServie.shared.fetch(query: UsersQuery())
+      .map({ (result)  in
+        List<UsersQuery.Data.User>(item: result.users?.compactMap{ $0
+          } ?? [])
+      })
+      .asSingle()
   }
 
 }

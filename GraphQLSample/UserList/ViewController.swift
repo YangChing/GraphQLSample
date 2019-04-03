@@ -36,12 +36,12 @@ class ViewController: UIViewController {
   }
 
   private func bindTableView() {
-    viewModel.customers
+    viewModel.users
       .map{ $0.item }
       .bind(to: tableView.rx.items)
       { (tableView, row, element) in
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        cell.textLabel?.text = "name：\(element.name ?? "nil") \naddress: \(element.address ?? "nil") \nemail: \(element.email ?? "nil")"
+        cell.textLabel?.text = "name：\(element.name ?? "nil") \nid: \(element.id ) \nphone: \(element.phone ?? "nil")"
         cell.textLabel?.numberOfLines = 3
         return cell
       }
